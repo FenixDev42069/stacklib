@@ -11,9 +11,9 @@ pip install StackLib
 ## Basic usage
 
 ```python
-from stacklib import Stack
+from stacklib.Stack import stack
 
-stack = Stack()
+stack = stack()
 stack.push(10).push(5).add()
 
 print(f'stack: {stack}')
