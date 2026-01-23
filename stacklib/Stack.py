@@ -96,7 +96,7 @@ class stack():
             item1 = self._data[0]
             if num != 0:
                 self._data.pop(0)
-                self._data.insert(0, item1 // num)
+                self._data.insert(0, item1 / num)
             else:
                 print('Division by zero is not allowed')
         else:
@@ -106,7 +106,7 @@ class stack():
                 self._data.pop(0)
                 self._data.pop(0)
                 if item2 != 0:
-                    self._data.insert(0, item1 // item2)
+                    self._data.insert(0, item1 / item2)
                 else:
                     print('Division by zero is not allowed')
                     self._data.insert(0, item1)
@@ -114,7 +114,31 @@ class stack():
             else:
                 print('Top two items are not integers or num is not a number')
         return self
-    
+
+    def res(self, num=None):
+        if num is not None and isinstance(num, (int, float)):
+            item1 = self._data[0]
+            if num != 0:
+                self._data.pop(0)
+                self._data.insert(0, item1 % num)
+            else:
+                print('Division by zero is not allowed')
+        else:
+            if isinstance(self._data[0], (int, float)) and isinstance(self._data[1], (int, float)):
+                item1 = self._data[0]
+                item2 = self._data[1]
+                self._data.pop(0)
+                self._data.pop(0)
+                if item2 != 0:
+                    self._data.insert(0, item1 % item2)
+                else:
+                    print('Division by zero is not allowed')
+                    self._data.insert(0, item1)
+                    self._data.insert(1, item2)
+            else:
+                print('Top two items are not integers or num is not a number')
+        return self
+
     def mod(self, num=None):
         if num is not None and isinstance(num, (int, float)):
             item1 = self._data[0]
@@ -164,7 +188,7 @@ class stack():
             print('Top item is not a number')
         return self
     
-    def absolute(self):
+    def abs(self):
         if isinstance(self._data[0], (int, float)):
             item1 = self._data[0]
             self._data.pop(0)
