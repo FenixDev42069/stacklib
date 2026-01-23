@@ -218,6 +218,8 @@ All are chainable
 
 ### `div(num=None)`
 
+### `res(num=None)`
+
 ### `mod(num=None)`
 
 ### `pow(exponent=None)`
